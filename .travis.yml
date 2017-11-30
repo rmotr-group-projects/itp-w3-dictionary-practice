@@ -1,0 +1,27 @@
+language: python
+sudo: false
+os:
+  - linux
+
+python:
+  - "2.7"
+  - "3.5"
+  - "3.6"
+
+install:
+  - pip install -r requirements.txt
+
+script:
+  - "py.test -v --tb=short assignment_1/tests.py"
+  - "py.test -v --tb=short assignment_2/tests.py"
+  - "py.test -v --tb=short assignment_3/tests.py"
+  - "py.test -v --tb=short assignment_4/tests.py"
+
+
+notifications:
+  webhooks:
+    urls:
+      - https://rmotr.com/api/v1/webhooks/travis/project-resolved
+    on_success: always
+    on_failure: never
+    on_start: never
