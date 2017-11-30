@@ -1,7 +1,7 @@
 from main import add_book_to_purchase
 
 
-def test_add_book_to_purchase():
+def test_add_book_to_purchase_base_use_case():
     purchase = {
         'id': 99,
         'books': [{
