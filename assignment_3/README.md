@@ -1,4 +1,4 @@
-# Number of customers per state
+# Number of customers per state
 
 Customers are expressed as a dictionary, divided by state. Each key represents a state. Example:
 
