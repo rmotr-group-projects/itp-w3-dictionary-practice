@@ -8,4 +8,4 @@ def calculate_purchase_price(purchase, set_to_dict=False):
     if set_to_dict == True:
         purchase['total'] = total
         
-    return total
+    return total 
