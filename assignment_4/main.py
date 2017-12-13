@@ -1,6 +1,6 @@
 def eldest_customer_per_state(customers_dict):
     eldest_customer = None
-    for customer in customers_list:
+    for customer in customers_dict:
         if eldest_customer is None:
             eldest_customer = customer
 
