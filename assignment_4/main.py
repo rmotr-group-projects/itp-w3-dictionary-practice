@@ -1,13 +1,13 @@
 def eldest_customer_per_state(customers_dict):
-    eldest_customer = None
-    for customer in customers_dict:
-        if eldest_customer is None:
-            eldest_customer = customer
-
-        else:
-            customer_age = customer['age']
-            eldest_customer_age = eldest_customer['age']
-            if customer_age >= eldest_customer_age:
-                eldest_customer = customer
-
+    eldest_customer = {}
+    
+    for state, customers in customers_dict.items():
+        age = 0
+        eldest = None
+        for customer in customers:
+            if customer.get('age') > age:
+                age = customer.get('age')
+                eldest = customer
+        eldest_customer[state] = eldest
+    
     return eldest_customer
